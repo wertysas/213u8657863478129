@@ -1,0 +1,2 @@
+PLACE a,b,NORTH
+REPORT
