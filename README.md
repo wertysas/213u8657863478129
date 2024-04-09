@@ -42,14 +42,10 @@ cmake --build /path/to/build-dir --config Release --target toybot
 ```
 
 
-## Usage
-The VM can be run as an interpreter in a shell by the command
+## Running the ToyBot code
+The Toybot can be run by the command (assuming ``cmake-build-release`` is the build directory)
 ```
-./toybot
-```
-Alternatively a lox script can be executed by the command:
-```
-./toybot < input
+./cmake-build-release/src/toybot < input.txt
 ```
 
 ## Tests
@@ -66,4 +62,10 @@ pytest
 
 ### Catch2 C++ unit tests
 The unit tests in C++ are implemented using [Catch2](https://github.com/catchorg/Catch2). They can be executed
-by building and running the ``unit_tests`` target.
+by building and running the ``unit_tests`` target, e.g. through the commands:
+```
+cmake --build cmake-build-release --target unit_tests
+./cmake-build-release/test/unit_tests
+
+```
+
